@@ -1,12 +1,12 @@
 # Implementation of Univariate Linear Regression
-## AIM:
+# AIM:
 To implement univariate Linear Regression to fit a straight line using least squares.
 
-## Equipments Required:
+# EQUIPMENTS REQUIRED:
 1. Hardware – PCs
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
-## Algorithm
+# ALGORITHM:
 1. Get the independent variable X and dependent variable Y.
 2. Calculate the mean of the X -values and the mean of the Y -values.
 3. Find the slope m of the line of best fit using the formula. 
@@ -16,72 +16,77 @@ To implement univariate Linear Regression to fit a straight line using least squ
 5. Use the slope m and the y -intercept to form the equation of the line.
 6. Obtain the straight line equation Y=mX+b and plot the scatterplot.
 
-## Program:
+# PROGRAM:
 ```
 /*
 Program to implement univariate Linear Regression to fit a straight line using least squares.
-Developed by: VISMAYA . S
-RegisterNumber:  212221230125
+Developed by: Vismaya S
+RegisterNumber: 212221230125
 */
 ```
-# LEAST SQUARE METHOD 
+
 ```
-import matplotlib.pyplot as plt ## library for display the graph
-x = [5,6,3,2,6,7,1,2]
-y = [2,3,6,5,8,3,5,8]
-plt.scatter(x,y) #scatter plot function
-plt.plot(x,y) # to map the dot using line 
-plt.show() # to display the plot
-from sys import base_prefix
+# least square method
+
+import matplotlib.pyplot as plt
+x=[5,6,3,2,6,7,1,2]
+y=[2,3,6,5,8,3,5,8]
+plt.scatter(x,y);
+plt.plot(x,y)
+plt.show()
+
 import numpy as np
 import matplotlib.pyplot as plt
-```
-# assign values in array
-```
-X = np.array([0,1,2,3,4,5,6,7,8,9])
-Y = np.array([1,3,2,5,7,8,8,9,10,12])
-```
-# to find the mean values of X and Y
-```
-X_mean = np.mean(X)
+
+# assign input
+
+X=np.array([0,1,2,3,4,5,6,7,8,9])
+Y=np.array([1,3,2,5,7,8,8,9,10,12])
+
+# mean values of input
+
+X_mean=np.mean(X)
 print(X_mean)
-Y_mean = np.mean(Y)
+Y_mean=np.mean(Y)
 print(Y_mean)
-```
-# To Find The Summation
-```
-num = 0
-denum = 0
-for i in range(len(X)):
+
+num=0
+denum=0
+
+for i in range (len(X)):
   num+=(X[i]-X_mean)*(Y[i]-Y_mean)
   denum+=(X[i]-X_mean)**2
-```
-# To find the slope for least square method
+  
+# find m
 
 m=num/denum
+print(m)
 
-  # To find the Y intercept 
-```
-b=Y_mean-m*(X_mean)
-print(m,b)
-```
-# Equation of the line: 
-```
-Y_pred = m*X+b
+# find b
+
+b=Y_mean-m*X_mean
+print(b)
+
+# find Y_pred
+
+Y_pred=m*X+b
 print(Y_pred)
-```
-# Plot graph :
 
-```
-plt.scatter(X,Y,color='blue')
-plt.plot(X,Y_pred,color='orange')
+# plot graph
+
+plt.scatter(X,Y)
+plt.plot(X,Y_pred,color='green')
 plt.show()
 ```
-/*
-## Output:
-![best fit line](ml1.png)
-![best fit line](ml1.png)
 
+# OUTPUT:
+![output](out1.png)
 
-## Result:
+![output](out2.png)
+
+![output](out3.png)
+
+![output](out4.png)
+
+# RESULT:
 Thus the univariate Linear Regression was implemented to fit a straight line using least squares using python programming.
