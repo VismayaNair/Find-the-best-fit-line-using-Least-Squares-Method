@@ -52,6 +52,8 @@ plt.show()
 ```
 ## Output:
 ![output](M1.jpeg)
+
+
 ![output](M2.jpeg)
 
 
